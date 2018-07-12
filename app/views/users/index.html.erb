@@ -3,7 +3,7 @@
  <div class="card card-login mx-auto mt-5">
    <div class="card-header">Login</div>
    <div class="card-body">
-    <%  form_tag(:controller => "employees", :action => "", :method => "") do |f| %><!--Codigo ruby -->
+    <%  form_tag(:controller => "users", :action => "login", :method => "post") do |f| %><!--Codigo ruby -->
        <div class="form-group">
          <label for="exampleInputEmail1">Email address</label>
          <input class="form-control" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email">
