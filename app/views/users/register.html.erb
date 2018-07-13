@@ -1,0 +1,45 @@
+
+
+<div class="container">
+
+    <div class="card mx-auto-5 mt-3">
+        <div class="card-header">Registrar usuarion
+        </div>
+            <dhiv class="card-body">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="column-md-6">
+                            <label id="lblLogin">Login:</label>
+                            <input type="text" id="txtLogin" name="txtLogin" placeholder="ingrese login" class="form-control"> </input>
+                        </div>
+                         <div class="column-md-6">
+                             <label id="lblPerfil">Login:</label>
+                                <select name="ddlPerfiles" id="dllPerfiles" class="form-control">
+                                    <%  @perfiles.each |item| do%>
+                                        <option value="<%=item.id %>"><%=item.descripcion %> </option>
+                                    <%  end do%>
+                                </select>
+                        </div>
+                    </div>
+                </div> 
+                <div class="form-group"> 
+                        <div class="form-row">
+                            <div class="column-md-6">
+                                 <label id="lblPassword">password:</label>
+                                 <input type="password" id="txtPassword" name="txtPassword" placeholder="ingrese login" class="form-control"> </input>
+                            </div>
+                             <div class="column-md-6">
+                                 <label id="lblPasswordConfirm">password:</label>
+                                 <input type="password" id="txtPasswordConfirm" name="txtPasstxtPasswordConfirmword" placeholder="ingrese login" class="form-control"> </input>
+                            </div>
+                        </div>
+                </div>
+                
+            </div>
+    </div>
+</div>
+
+
+
+<div>
+</div>
