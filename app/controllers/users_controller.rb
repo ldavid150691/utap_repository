@@ -8,6 +8,20 @@ class UsersController < ApplicationController
 
 
     def login
+        
+         if User.exists?(:login=>params[:txtUser],:password=>params[:txtPassword])
+            @mensaje= "Usuario correcto"
+            @tipo="succes"
+	        render 'index'
+        else
+            @mensaje= "Usuario incorrecto"
+            @tipo="error"
+            render 'index'
+            
+        end
     end
+
+
+
 
 end
