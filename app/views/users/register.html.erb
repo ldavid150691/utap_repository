@@ -1,11 +1,19 @@
-
+<%  if @mensaje != nil  %>
+    <input type="text" id="txtMensaje" hidden="" value="<%=@mensaje%>"  />
+    <input type="text" id="txtTipo" hidden="" value="<%=@tipo%>"/>
+    <script>        
+        swal("Notificacion", document.getElementById("txtMensaje").value, document.getElementById("txtTipo").value);
+    </script>
+<% end %>
+ 
 
 <div class="container">
 
     <div class="card mx-auto-5 mt-3">
         <div class="card-header">Registrar usuarion
         </div>
-            <dhiv class="card-body">
+            <div class="card-body">
+             <%=  form_tag(:controller => "users", :action => "createUser", :method => "post") do |f| %><!--Codigo ruby para etiquetas html -->
                 <div class="form-group">
                     <div class="form-row">
                         <div class="column-md-6">
@@ -14,10 +22,10 @@
                         </div>
                          <div class="column-md-6">
                              <label id="lblPerfil">Login:</label>
-                                <select name="ddlPerfiles" id="dllPerfiles" class="form-control">
-                                    <%  @perfiles.each |item| do%>
+                                <select name="dllPerfiles" id="dllPerfiles" class="form-control">
+                                    <%  @perfiles.each do |item|  %>
                                         <option value="<%=item.id %>"><%=item.descripcion %> </option>
-                                    <%  end do%>
+                                    <%end%>
                                 </select>
                         </div>
                     </div>
@@ -34,12 +42,15 @@
                             </div>
                         </div>
                 </div>
-                
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="column-md-12">
+                              <input type="submit" class="btn btn-primary btn-block" name="btnAceptar" id="btnAceptar" value="Aceptar"></input>
+                        </div>
+                    </div>
+                </div>
+
+             <% end %><!--Codigo ruby -->   
             </div>
     </div>
-</div>
-
-
-
-<div>
 </div>

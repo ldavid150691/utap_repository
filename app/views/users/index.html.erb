@@ -1,6 +1,6 @@
 <%  if @mensaje != nil  %>
-    <input type="text" id="txtMensaje" hidden="" value="<%=@mensaje%>"  />
-    <input type="text" id="txtTipo" hidden="" value="<%=@tipo%>"/>
+    <input type="text" id="txtMensaje"  value="<%=@mensaje%>"  />
+    <input type="text" id="txtTipo"  value="<%=@tipo%>"/>
     <script>        
         swal("Notificacion", document.getElementById("txtMensaje").value, document.getElementById("txtTipo").value);
     </script>
