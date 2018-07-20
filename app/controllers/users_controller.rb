@@ -67,5 +67,6 @@ class UsersController < ApplicationController
                 render "register"
             end          
     end
+    
 
 end
